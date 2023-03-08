@@ -16,22 +16,25 @@ async function main() {
     noCache: true,
   })
 
-  // serve pages from express
-  app.get('/hello', (req, res) => {
+  // serve a page from express
+  app.get('/contact', (req, res) => {
     res.send('Hello, from express');
   });
 
+  // serve a page from vue
   app.get('/dashboard', (req, res, next) => {
     req.url = '/__vue__';
     next('route');
   });
 
-  app.get('/profile', (req, res, next) => {
+  // serve another page from vue
+  app.get('/account', (req, res, next) => {
     req.url = '/__vue__';
     next('route');
   });
 
-  app.get('/__vue__', async (req, res, next) => {
+  // virtual route to forward to
+  app.get('/__vue__', async (req, res) => {
     const config = { message: Date.now() };
     if (NODE_ENV == 'dev') {
       const template = await fetch(`http://localhost:${PROXY_PORT}`);
