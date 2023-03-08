@@ -1,0 +1,19 @@
+{
+  "name": "vite-express-example",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "start": "node app",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "http-proxy": "^1.18.1",
+    "nunjucks": "^3.2.3",
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vite": "^4.0.4"
+  }
+}
