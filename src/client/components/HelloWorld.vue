@@ -15,7 +15,7 @@ const count = ref(0);
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
       Edit
-      <code>components/HelloWorld.vue</code> to test HMR___
+      <code>components/HelloWorld.vue</code> to test HMR!
     </p>
   </div>
 

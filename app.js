@@ -73,6 +73,7 @@ async function main() {
     app.use(express.static(__dirname + '/dist'));
   }
 
+  console.log(`listening on port ${port}`);
 }
 
 main();
